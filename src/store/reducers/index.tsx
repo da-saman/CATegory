@@ -1,7 +1,7 @@
 import { GET_ALL_CATEGORIES_SUCCEEDED, GET_THE_CATEGORY_SUCCEEDED } from '../actionTypes';
 const initialState = {
   categories: [{ "id": 5, "name": "boxes" }, { "id": 15, "name": "clothes" }],
-  cats: [],
+  categry: [],
   selectedCategory: null
 }
 
@@ -16,10 +16,10 @@ const reducer = function (state: any = initialState, action: any) {
       }
     }
     case GET_THE_CATEGORY_SUCCEEDED: {
-      const { theCategory} = action.payload;
-      return { 
+      const { category } = action.payload;
+      return {
         ...state,
-        selectedCategory: theCategory
+        categry: category
       }
     }
     default: {
