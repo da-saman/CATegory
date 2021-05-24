@@ -5,7 +5,3 @@ export const Layout = styled.div`
   flex-direction: row;
 `;
 
-export const CatImage = styled.img`
-  width: 100px;
-  height: 100px;
-`;
