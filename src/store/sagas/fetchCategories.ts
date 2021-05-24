@@ -1,7 +1,7 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
 import {
   GET_ALL_CATEGORIES_REQUESTED,
-  GET_ALL_CATEGORIES_SUCCEEDED,
+  // GET_ALL_CATEGORIES_SUCCEEDED,
   GET_ALL_CATEGORIES_FAILED
 } from '../actionTypes';
 import { storeCategories } from '../actions'
@@ -22,7 +22,7 @@ function* fetchCategories(): Generator<
   }
 }
 
-function* mySaga() {
+function* fetchAllCategoriesSaga() {
   yield takeEvery(GET_ALL_CATEGORIES_REQUESTED, fetchCategories);
 }
-export default mySaga;
+export default fetchAllCategoriesSaga;

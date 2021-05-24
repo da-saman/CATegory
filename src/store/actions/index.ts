@@ -1,7 +1,8 @@
 import {
   GET_ALL_CATEGORIES_SUCCEEDED,
   GET_ALL_CATEGORIES_REQUESTED,
-  GET_THE_CATEGORY_SUCCEEDED
+  GET_THE_CATEGORY_SUCCEEDED,
+  GET_THE_CATEGORY_REQUESTED
 } from '../actionTypes';
 
 
@@ -15,7 +16,13 @@ export const storeCategories = (categories: any) => ({
   }
 });
 
-export const getTheCategory = (category: any) => ({
+export const fetchTheCategory = (id: number) => ({
+  type: GET_THE_CATEGORY_REQUESTED,
+  payload: {
+    id: id
+  }
+})
+export const storeTheCategory = (category: any) => ({
   type: GET_THE_CATEGORY_SUCCEEDED,
   payload: {
     category: category
