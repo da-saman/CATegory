@@ -6,6 +6,7 @@ import {
   theCategorySelector,
 } from "../src/store/selectors";
 import { fetchCategories, fetchTheCategory } from "../src/store/actions";
+import { Layout, CatImage } from "./App.style";
 
 function App() {
   const allCategories = useSelector(allCategoriesSelector);
@@ -15,20 +16,23 @@ function App() {
     dispatch(fetchCategories());
   }, [dispatch]);
   return (
-    <div className="App">
-      {allCategories.map((category: any) => (
-        <p
-          onClick={() => dispatch(fetchTheCategory(category.id))}
-          key={category.id}
-        >
-          {category.name}
-        </p>
-      ))}
-
-      {theCategory.map((category: any) => (
-        <img src={category.url}></img>
-      ))}
-    </div>
+    <Layout>
+      <div>
+        {allCategories.map((category: any) => (
+          <p
+            onClick={() => dispatch(fetchTheCategory(category.id))}
+            key={category.id}
+          >
+            {category.name}
+          </p>
+        ))}
+      </div>
+      <div>
+        {theCategory.map((category: any) => (
+          <CatImage src={category.url} />
+        ))}
+      </div>
+    </Layout>
   );
 }
 
