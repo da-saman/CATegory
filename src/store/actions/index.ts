@@ -1,21 +1,15 @@
-import { GET_ALL_CATEGORIES, GET_THE_CATEGORY } from '../actionTypes';
-const initialState = {
-  categories: [],
-  cats: [],
-  selectedCategory: null
-}
+import { GET_ALL_CATEGORIES_SUCCEEDED, GET_THE_CATEGORY_SUCCEEDED } from '../actionTypes';
 
-
-const reducer = function (state: any = initialState, action: any) {
-  switch (action.type) {
-    case GET_ALL_CATEGORIES: {
-      const { categories } = action.payload;
-      return {
-        ...state,
-        categories: categories
-      }
-    }
+export const getAllCategories = (categories: any) => ({
+  type: GET_ALL_CATEGORIES_SUCCEEDED,
+  payload: {
+    categories: categories
   }
-}
+});
 
-export default reducer;
+export const getTheCategory = (category: any) => ({
+  type: GET_THE_CATEGORY_SUCCEEDED,
+  payload: {
+    category: category
+  }
+})
