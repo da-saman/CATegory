@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { allCategoriesSelector } from "../../store/selectors";
-import { fetchCategories, fetchTheCategory } from "../../store/actions";
+import { fetchCategories } from "../../store/actions";
 
 const Categories = () => {
   const allCategories = useSelector(allCategoriesSelector);
@@ -12,7 +12,6 @@ const Categories = () => {
   }, [dispatch]);
   return (
     <ul>
-      <li>
         {allCategories.map((category: any) => (
           // <p
           //   onClick={() => dispatch(fetchTheCategory(category.id))}
@@ -20,9 +19,10 @@ const Categories = () => {
           // >
           //   {category.name}
           // </p>
-          <Link to="/cats">Home</Link>
+          <li key={category.id}>
+            <Link to={`/cats/${category.id}`}>{category.name}</Link>
+          </li>
         ))}
-      </li>
     </ul>
   );
 };
