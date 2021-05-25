@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { allCategoriesSelector } from "../../store/selectors";
 import { fetchCategories } from "../../store/actions";
 
-const Categories = () => {
+const CategoryLinks = () => {
   const allCategories = useSelector(allCategoriesSelector);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -13,12 +13,6 @@ const Categories = () => {
   return (
     <ul>
         {allCategories.map((category: any) => (
-          // <p
-          //   onClick={() => dispatch(fetchTheCategory(category.id))}
-          //   key={category.id}
-          // >
-          //   {category.name}
-          // </p>
           <li key={category.id}>
             <Link to={`/cats/${category.id}`}>{category.name}</Link>
           </li>
@@ -27,4 +21,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default CategoryLinks;

@@ -4,7 +4,7 @@ import { catImagesSelector } from "../../store/selectors";
 import { CatImage } from "./index.style";
 import { useParams } from "react-router-dom";
 import { fetchCatImages } from "../../store/actions";
-import { Cat } from '../../types/category'
+import { Cat } from "../../types/category";
 
 const Cats = () => {
   const catImages = useSelector(catImagesSelector);
@@ -14,12 +14,18 @@ const Cats = () => {
     if (params.id) {
       dispatch(fetchCatImages(params.id));
     }
-  }, [dispatch,params.id]);
+  }, [dispatch, params.id]);
 
   return (
     <div>
       {catImages.map((catImage: Cat) => (
-        <CatImage key={catImage.id} src={catImage.url} width={catImage.width} height={catImage.height}/>
+        <CatImage
+          key={catImage.id}
+          src={catImage.url}
+          width={catImage.width}
+          height={catImage.height}
+          loading="lazy"
+        />
       ))}
     </div>
   );
