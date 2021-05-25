@@ -4,6 +4,7 @@ import { theCategorySelector } from "../../store/selectors";
 import { CatImage } from "./index.style";
 import { useParams } from "react-router-dom";
 import { fetchTheCategory } from "../../store/actions";
+import { Cat } from '../../types/category'
 
 const Cats = () => {
   const theCategory = useSelector(theCategorySelector);
@@ -17,7 +18,7 @@ const Cats = () => {
 
   return (
     <div>
-      {theCategory.map((category: any) => (
+      {theCategory.map((category: Cat) => (
         <CatImage key={category.id} src={category.url} />
       ))}
     </div>
