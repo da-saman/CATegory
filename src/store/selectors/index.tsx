@@ -1,3 +1,3 @@
 export const allCategoriesSelector = (store: any) => store.categories;
 
-export const theCategorySelector = (store: any) => store.categry;
+export const catImagesSelector = (store: any) => store.catImages;

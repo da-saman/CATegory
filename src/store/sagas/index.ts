@@ -1,13 +1,8 @@
-import { all } from 'redux-saga/effects';
+import { all } from "redux-saga/effects";
 
-
-import fetchAllCategoriesSaga from './fetchCategories'
-import fetchCategorySaga  from './fetchCategory'
+import fetchAllCategoriesSaga from "./fetchCategories";
+import fetchCatImagesSaga from "./fetchCatImages";
 
 export default function* rootSaga(): any {
-  yield all([
-    fetchAllCategoriesSaga(),
-    fetchCategorySaga(),
-
-  ]);
+  yield all([fetchAllCategoriesSaga(), fetchCatImagesSaga()]);
 }

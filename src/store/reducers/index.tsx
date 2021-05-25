@@ -1,7 +1,7 @@
-import { GET_ALL_CATEGORIES_SUCCEEDED, GET_THE_CATEGORY_SUCCEEDED } from '../actionTypes';
+import { GET_ALL_CATEGORIES_SUCCEEDED, GET_CAT_IMAGES_SUCCEEDED } from '../actionTypes';
 const initialState = {
-  categories: [{ "id": 5, "name": "boxes" }, { "id": 15, "name": "clothes" }],
-  categry: [],
+  categories: [],
+  catImages: [],
   selectedCategory: null
 }
 
@@ -15,11 +15,11 @@ const reducer = function (state: any = initialState, action: any) {
         categories: categories
       }
     }
-    case GET_THE_CATEGORY_SUCCEEDED: {
+    case GET_CAT_IMAGES_SUCCEEDED: {
       const { category } = action.payload;
       return {
         ...state,
-        categry: category
+        catImages: category
       }
     }
     default: {

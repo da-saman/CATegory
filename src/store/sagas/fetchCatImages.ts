@@ -1,12 +1,12 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
 import {
-  GET_THE_CATEGORY_REQUESTED,
-  // GET_THE_CATEGORY_SUCCEEDED,
-  GET_THE_CATEGORY_FAILED
+  GET_CAT_IMAGES_REQUESTED,
+  // GET_CAT_IMAGES_SUCCEEDED,
+  GET_CAT_IMAGES_FAILED
 } from '../actionTypes';
 import { storeTheCategory } from '../actions'
 
-function* fetchCategory(action: any): Generator<any, any, any> {
+function* fetchCatImages(action: any): Generator<any, any, any> {
   try {
     const category: any = yield call((): any =>
       fetch(`https://api.thecatapi.com/v1/images/search?limit=10&category_ids${action.payload.id}`)
@@ -14,11 +14,11 @@ function* fetchCategory(action: any): Generator<any, any, any> {
     );
     yield put(storeTheCategory(category));
   } catch (e) {
-    yield put({ type: GET_THE_CATEGORY_FAILED, message: e.message });
+    yield put({ type: GET_CAT_IMAGES_FAILED, message: e.message });
   }
 }
 
-function* fetchCategorySaga() {
-  yield takeEvery(GET_THE_CATEGORY_REQUESTED, fetchCategory);
+function* fetchCatImagesSaga() {
+  yield takeEvery(GET_CAT_IMAGES_REQUESTED, fetchCatImages);
 }
-export default fetchCategorySaga;
+export default fetchCatImagesSaga;

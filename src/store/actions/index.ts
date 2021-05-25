@@ -1,8 +1,8 @@
 import {
   GET_ALL_CATEGORIES_SUCCEEDED,
   GET_ALL_CATEGORIES_REQUESTED,
-  GET_THE_CATEGORY_SUCCEEDED,
-  GET_THE_CATEGORY_REQUESTED
+  GET_CAT_IMAGES_SUCCEEDED,
+  GET_CAT_IMAGES_REQUESTED
 } from '../actionTypes';
 
 
@@ -16,14 +16,14 @@ export const storeCategories = (categories: any) => ({
   }
 });
 
-export const fetchTheCategory = (id: number) => ({
-  type: GET_THE_CATEGORY_REQUESTED,
+export const fetchCatImages = (id: number) => ({
+  type: GET_CAT_IMAGES_REQUESTED,
   payload: {
     id: id
   }
 })
 export const storeTheCategory = (category: any) => ({
-  type: GET_THE_CATEGORY_SUCCEEDED,
+  type: GET_CAT_IMAGES_SUCCEEDED,
   payload: {
     category: category
   }
