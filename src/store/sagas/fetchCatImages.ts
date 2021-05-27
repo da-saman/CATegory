@@ -1,13 +1,11 @@
 import { call, put, takeEvery, select } from "redux-saga/effects";
 import {
   GET_CAT_IMAGES_REQUESTED,
-  // GET_CAT_IMAGES_SUCCEEDED,
-  GET_CAT_IMAGES_FAILED,
 } from "../actionTypes";
-import { storeTheCategory } from "../actions";
+import { storeTheCategory, fetchCatImagesFailed } from "../actions";
 import { pageSelector } from "../selectors";
 
-function* fetchCatImages(action: any): Generator<any, any, any> {
+export function* fetchCatImages(action: any): Generator<any, any, any> {
   try {
     const page = yield select(pageSelector);
     const { isMore } = action.payload;
@@ -20,7 +18,7 @@ function* fetchCatImages(action: any): Generator<any, any, any> {
     );
     yield put(storeTheCategory(catImages, isMore));
   } catch (e) {
-    yield put({ type: GET_CAT_IMAGES_FAILED, message: e.message });
+    yield put(fetchCatImagesFailed(e.message));
   }
 }
 

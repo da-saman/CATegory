@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { allCategoriesSelector } from "../../store/selectors";
 import { fetchCategories } from "../../store/actions";
 import { SideBar, NavItems } from "./index.style";
+import {CategoryType} from "../../types"
 const CategoryLinks = () => {
   const allCategories = useSelector(allCategoriesSelector);
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const CategoryLinks = () => {
   }, [dispatch]);
   return (
     <SideBar>
-      {allCategories.map((category: any) => (
+      {allCategories.map((category: CategoryType) => (
         <NavItems key={category.id}>
           <Link to={`/cats/${category.id}`}>{category.name}</Link>
         </NavItems>
