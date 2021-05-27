@@ -19,5 +19,6 @@ export const NavItems = styled.div`
   display: block;
   a {
     color: #818181;
+    text-decoration: none;
   }
 `;

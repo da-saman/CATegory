@@ -11,7 +11,6 @@ import {
   GET_CAT_IMAGES_SUCCEEDED,
 } from "../actionTypes";
 import {mockCategories,mockCatImages} from '../../mock'
-// import { CatImageType } from "../../types";
 
 
 describe("create actions", () => {
