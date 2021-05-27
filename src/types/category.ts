@@ -3,9 +3,9 @@ export interface Category {
   name: string;
 }
 
-export interface Cat {
+export interface CatImageType {
   breeds: [];
-  categories: Array<Category>;
+  // categories: Array<Category>;
   id: string;
   url: string;
   width: number;

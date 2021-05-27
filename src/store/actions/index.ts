@@ -1,10 +1,10 @@
 import {
-  GET_ALL_CATEGORIES_SUCCEEDED,
   GET_ALL_CATEGORIES_REQUESTED,
-  GET_CAT_IMAGES_SUCCEEDED,
+  GET_ALL_CATEGORIES_SUCCEEDED,
   GET_CAT_IMAGES_REQUESTED,
+  GET_CAT_IMAGES_SUCCEEDED,
 } from "../actionTypes";
-
+import {CatImageType} from '../../types'
 export const fetchCategories = () => ({
   type: GET_ALL_CATEGORIES_REQUESTED,
 });
@@ -22,10 +22,10 @@ export const fetchCatImages = (id: number, isMore: boolean) => ({
     isMore: isMore,
   },
 });
-export const storeTheCategory = (category: any, isMore: boolean) => ({
+export const storeTheCategory = (images: Array<CatImageType>, isMore: boolean) => ({
   type: GET_CAT_IMAGES_SUCCEEDED,
   payload: {
-    category: category,
+    images: images,
     isMore: isMore,
   },
 });

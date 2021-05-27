@@ -18,7 +18,7 @@ const reducer = function (state: any = initialState, action: any) {
       };
     }
     case GET_CAT_IMAGES_SUCCEEDED: {
-      const catImages = action.payload.category;
+      const catImages = action.payload.images;
       const { isMore } = action.payload;
       return {
         ...state,

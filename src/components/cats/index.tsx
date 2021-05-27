@@ -4,7 +4,7 @@ import { catImagesSelector } from "../../store/selectors";
 import { MainWrapper, CatWrapper, CatImage, LoadMoreButton } from "./index.style";
 import { useParams } from "react-router-dom";
 import { fetchCatImages } from "../../store/actions";
-import { Cat } from "../../types/category";
+import { CatImageType } from "../../types/category";
 
 const Cats = () => {
   const catImages = useSelector(catImagesSelector);
@@ -17,7 +17,7 @@ const Cats = () => {
   return (
     <MainWrapper>
       <CatWrapper>
-        {catImages.map((catImage: Cat) => (
+        {catImages.map((catImage: CatImageType) => (
           <CatImage
             key={catImage.id}
             src={catImage.url}
