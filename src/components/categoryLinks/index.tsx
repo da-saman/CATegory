@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { allCategoriesSelector } from "../../store/selectors";
 import { fetchCategories } from "../../store/actions";
-
+import { SideBar, NavItems } from "./index.style";
 const CategoryLinks = () => {
   const allCategories = useSelector(allCategoriesSelector);
   const dispatch = useDispatch();
@@ -11,13 +11,13 @@ const CategoryLinks = () => {
     dispatch(fetchCategories());
   }, [dispatch]);
   return (
-    <ul>
-        {allCategories.map((category: any) => (
-          <li key={category.id}>
-            <Link to={`/cats/${category.id}`}>{category.name}</Link>
-          </li>
-        ))}
-    </ul>
+    <SideBar>
+      {allCategories.map((category: any) => (
+        <NavItems key={category.id}>
+          <Link to={`/cats/${category.id}`}>{category.name}</Link>
+        </NavItems>
+      ))}
+    </SideBar>
   );
 };
 

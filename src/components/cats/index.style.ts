@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 100vh;
+  min-width: 80vw;
+  margin-left: 160px;
 `;
 export const CatWrapper = styled.div`
   display: flex;
@@ -21,8 +26,18 @@ export const CatImage = styled.img<CatImgProp>`
 `;
 
 export const LoadMoreButton = styled.button`
-  height: 30px;
-  background-color: blue;
+  height: 40px;
+  background-color: #007af5;
   color: white;
   font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  bottom:0
 `;
