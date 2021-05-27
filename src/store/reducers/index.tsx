@@ -2,13 +2,15 @@ import {
   GET_ALL_CATEGORIES_SUCCEEDED,
   GET_CAT_IMAGES_SUCCEEDED,
 } from "../actionTypes";
-const initialState = {
+import { CatImageType, StateType } from "../../types";
+
+export const initialState: StateType = {
   categories: [],
   catImages: [],
   page: 0,
 };
 
-const reducer = function (state: any = initialState, action: any) {
+const reducer = function (state: StateType = initialState, action: any) {
   switch (action.type) {
     case GET_ALL_CATEGORIES_SUCCEEDED: {
       const { categories } = action.payload;
@@ -18,7 +20,7 @@ const reducer = function (state: any = initialState, action: any) {
       };
     }
     case GET_CAT_IMAGES_SUCCEEDED: {
-      const catImages = action.payload.images;
+      const catImages : Array<CatImageType> = action.payload.images;
       const { isMore } = action.payload;
       return {
         ...state,

@@ -1,7 +1,7 @@
 import { cloneableGenerator } from "@redux-saga/testing-utils";
 import { fetchCatImages as fetchCatImagesSaga } from "./fetchCatImages";
 import { GET_CAT_IMAGES_REQUESTED } from "../actionTypes";
-import { storeTheCategory, fetchCatImagesFailed } from "../actions";
+import { storeCatImages, fetchCatImagesFailed } from "../actions";
 import { call, put, select } from "redux-saga/effects";
 import { mockCatImages } from "../../mock";
 import { pageSelector } from "../selectors";
@@ -32,7 +32,7 @@ describe("fetch cat images saga testing", () => {
 
     it("put the resolved cats", () => {
       const result = clone.next(mockCatImages).value;
-      expect(result).toEqual(put(storeTheCategory(mockCatImages, true)));
+      expect(result).toEqual(put(storeCatImages(mockCatImages, true)));
     });
 
     it("performs no further work", () => {

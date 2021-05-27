@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { allCategoriesSelector } from "../../store/selectors";
 import { fetchCategories } from "../../store/actions";
 import { SideBar, NavItems } from "./index.style";
-import {CategoryType} from "../../types"
+import { CategoryType } from "../../types";
+
 const CategoryLinks = () => {
   const allCategories = useSelector(allCategoriesSelector);
   const dispatch = useDispatch();

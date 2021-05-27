@@ -1,5 +1,7 @@
-export const allCategoriesSelector = (store: any) => store.categories;
+import { StateType } from "../../types";
 
-export const catImagesSelector = (store: any) => store.catImages;
+export const allCategoriesSelector = (store: StateType) => store.categories;
 
-export const pageSelector = (store: any) => store.page;
+export const catImagesSelector = (store: StateType) => store.catImages;
+
+export const pageSelector = (store: StateType) => store.page;

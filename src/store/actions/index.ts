@@ -33,7 +33,7 @@ export const fetchCatImages = (id: number, isMore: boolean) => ({
     isMore: isMore,
   },
 });
-export const storeTheCategory = (
+export const storeCatImages = (
   images: Array<CatImageType>,
   isMore: boolean
 ) => ({

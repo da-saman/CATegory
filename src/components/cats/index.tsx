@@ -4,7 +4,7 @@ import { catImagesSelector } from "../../store/selectors";
 import { MainWrapper, CatWrapper, CatImage, LoadMoreButton } from "./index.style";
 import { useParams } from "react-router-dom";
 import { fetchCatImages } from "../../store/actions";
-import { CatImageType } from "../../types/category";
+import { CatImageType } from "../../types";
 
 const Cats = () => {
   const catImages = useSelector(catImagesSelector);

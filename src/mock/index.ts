@@ -1,5 +1,4 @@
-import { CatImageType,CategoryType } from "../types";
-
+import { CatImageType, CategoryType } from "../types";
 
 export const mockCategories: Array<CategoryType> = [
   { id: 5, name: "boxes" },
@@ -14,6 +13,7 @@ export const mockCategories: Array<CategoryType> = [
 export const mockCatImages: Array<CatImageType> = [
   {
     breeds: [],
+    categories: [],
     id: "b08",
     url: "https://cdn2.thecatapi.com/images/b08.jpg",
     width: 500,
@@ -21,6 +21,7 @@ export const mockCatImages: Array<CatImageType> = [
   },
   {
     breeds: [],
+    categories: [],
     id: "bu9",
     url: "https://cdn2.thecatapi.com/images/bu9.jpg",
     width: 1095,
@@ -28,6 +29,7 @@ export const mockCatImages: Array<CatImageType> = [
   },
   {
     breeds: [],
+    categories: [],
     id: "drm",
     url: "https://cdn2.thecatapi.com/images/drm.jpg",
     width: 500,
@@ -35,6 +37,7 @@ export const mockCatImages: Array<CatImageType> = [
   },
   {
     breeds: [],
+    categories: [],
     id: "e54",
     url: "https://cdn2.thecatapi.com/images/e54.jpg",
     width: 800,
@@ -42,6 +45,7 @@ export const mockCatImages: Array<CatImageType> = [
   },
   {
     breeds: [],
+    categories: [],
     id: "MTc4NjYzNA",
     url: "https://cdn2.thecatapi.com/images/MTc4NjYzNA.jpg",
     width: 642,
@@ -49,6 +53,7 @@ export const mockCatImages: Array<CatImageType> = [
   },
   {
     breeds: [],
+    categories: [],
     id: "cEIk2galG",
     url: "https://cdn2.thecatapi.com/images/cEIk2galG.jpg",
     width: 3456,
@@ -56,6 +61,7 @@ export const mockCatImages: Array<CatImageType> = [
   },
   {
     breeds: [],
+    categories: [],
     id: "SoXrNzsai",
     url: "https://cdn2.thecatapi.com/images/SoXrNzsai.jpg",
     width: 1200,
@@ -63,6 +69,7 @@ export const mockCatImages: Array<CatImageType> = [
   },
   {
     breeds: [],
+    categories: [],
     id: "Mcv1ZZpW_",
     url: "https://cdn2.thecatapi.com/images/Mcv1ZZpW_.jpg",
     width: 1200,
@@ -70,6 +77,7 @@ export const mockCatImages: Array<CatImageType> = [
   },
   {
     breeds: [],
+    categories: [],
     id: "fjcAmBHVp",
     url: "https://cdn2.thecatapi.com/images/fjcAmBHVp.jpg",
     width: 3024,
@@ -77,6 +85,7 @@ export const mockCatImages: Array<CatImageType> = [
   },
   {
     breeds: [],
+    categories: [],
     id: "Xy7teHcCZ",
     url: "https://cdn2.thecatapi.com/images/Xy7teHcCZ.jpg",
     width: 5365,

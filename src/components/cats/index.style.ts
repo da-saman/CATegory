@@ -23,6 +23,7 @@ export const CatImage = styled.img<CatImgProp>`
   width: ${({ height, width }) => (width / height) * 25}vh;
   height: 25vh;
   margin: 10px;
+  background-color: #818181
 `;
 
 export const LoadMoreButton = styled.button`

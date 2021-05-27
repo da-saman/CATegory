@@ -2,7 +2,7 @@ import {
   storeCategories,
   fetchCategories,
   fetchCatImages,
-  storeTheCategory,
+  storeCatImages,
 } from "./index";
 import {
   GET_ALL_CATEGORIES_REQUESTED,
@@ -53,6 +53,6 @@ describe("create actions", () => {
         isMore: true,
       },
     };
-    expect(storeTheCategory(mockCatImages, true)).toEqual(expectedAction);
+    expect(storeCatImages(mockCatImages, true)).toEqual(expectedAction);
   });
 });
