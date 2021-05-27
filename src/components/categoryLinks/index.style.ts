@@ -20,5 +20,8 @@ export const NavItems = styled.div`
   a {
     color: #818181;
     text-decoration: none;
+    &:hover {
+      color: white;
+    }
   }
 `;
