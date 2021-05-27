@@ -5,7 +5,7 @@ export const MainWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  min-height: 100vh;
+  min-height: 98vh;
   min-width: 80vw;
   margin-left: 160px;
 `;
